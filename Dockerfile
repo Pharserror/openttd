@@ -5,13 +5,15 @@
 
 FROM phusion/baseimage
 
-MAINTAINER Mats Bergmann <bateau@sea-shell.org>
+MAINTAINER Pharserror <sunboxnet@gmail.com>
+
+ENV OPENTTD_VER 1.5.3
 
 WORKDIR /tmp/
 ADD . /tmp/
-RUN /tmp/prepare.sh && \
-    /tmp/system_services.sh && \
-    /tmp/cleanup.sh
+RUN /tmp/prepare.sh 
+RUN /tmp/system_services.sh
+RUN /tmp/cleanup.sh
 
 VOLUME /home/openttd/.openttd
 
