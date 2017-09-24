@@ -44,6 +44,6 @@ if [ ${LOADGAME_CHECK} != "x" ]; then
         esac
 else
 	echo "\$loadgame (\"${loadgame}\") not set, starting new game"
-        exec /sbin/setuser openttd /usr/games/openttd -D -x
+        exec /sbin/setuser openttd /usr/games/openttd -D -x -t ${startyear} -r ${map_x}x${map_y}
         exit 0
 fi
