@@ -3,5 +3,7 @@ export DEBIAN_FRONTEND=noninteractive
 export DEBUG=0
 export loadgame=false
 export savename=autosave/exit.sav
+export map_x=12
+export map_y=12
 
 minimal_apt_get_install='apt-get install -y --no-install-recommends'
